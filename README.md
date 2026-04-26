@@ -5,7 +5,9 @@ Instrukcja Uruchomienia
 
 ```
 • Pobierz lub sklonuj repozytorium:
+   ```bash
    git clone https://github.com/Shade0884/biblioteka-online.git
+   ```
 • Otwórz plik index.html w przeglądarce.
 • Nie jest wymagany żaden serwer - strona działa lokalnie.
 ```
@@ -41,8 +43,8 @@ Podział zadan
 
 Struktura plików
 
-biblioteka-online/
 ```
+biblioteka-online/
 ├── index.html     • Główna strona
 ├── style.css      • Arkusz stylów
 ├── script.js      • Logika JavaScript
