@@ -14,13 +14,13 @@ Pełnione funkcje:
 
 ```
 | Funkcja | Opis |
-| 📖 Lista książek | 16 książek z okładką, tytułem, autorem, kategorią i statusem
-| 🔍 Wyszukiwarka | Filtrowanie po tytule i autorze w czasie rzeczywistym
-| 🏷️ Filtry kategorii | Fantasy, IT, Nauka, Klasyka, Sci-Fi, Rozwój
-| ↕️ Sortowanie | Tytuł A-Z / Z-A, Autor A-Z
-| 🛒 Koszyk | Dodawanie / usuwanie książek, licznik, panel boczny
-| 📋 Formularz kontaktowy | Walidacja: imię, email, wiadomość + komunikaty błędów
-| 📱 RWD | Działa na telefonie (360px), tablecie (768px) i komputerze
+| 📖 Lista książek | 16 książek z okładką, tytułem, autorem, kategorią i statusem |
+| 🔍 Wyszukiwarka | Filtrowanie po tytule i autorze w czasie rzeczywistym |
+| 🏷️ Filtry kategorii | Fantasy, IT, Nauka, Klasyka, Sci-Fi, Rozwój |
+| ↕️ Sortowanie | Tytuł A-Z / Z-A, Autor A-Z |
+| 🛒 Koszyk | Dodawanie / usuwanie książek, licznik, panel boczny |
+| 📋 Formularz kontaktowy | Walidacja: imię, email, wiadomość + komunikaty błędów |
+| 📱 RWD | Działa na telefonie (360px), tablecie (768px) i komputerze |
 ```
 
 Technologie uzyte:
@@ -35,8 +35,8 @@ Podział zadan
 
 ```
 | Uczeń | Zakres prac |
-| Piotr Szymańsi : Struktura HTML, semantyka, dostępność, formularz kontaktowy
-| Fabian Szulda : CSS (układ, RWD, animacje), JavaScript (filtry, koszyk, walidacja)
+| Piotr Szymański : Struktura HTML, semantyka, dostępność, formularz kontaktowy |
+| Fabian Szulda : CSS (układ, RWD, animacje), JavaScript (filtry, koszyk, walidacja) |
 ```
 
 Struktura plików
