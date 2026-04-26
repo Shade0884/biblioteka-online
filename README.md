@@ -3,13 +3,16 @@ Projekt: strona internetowa wypożyczalni książek stworzona w HTML, CSS i Java
 
 Instrukcja Uruchomienia
 
+```
 • Pobierz lub sklonuj repozytorium:
    git clone https://github.com/Shade0884/biblioteka-online.git
-• Otwórz plik index.html w przeglądarce (Chrome / Firefox / Edge).
-• Nie jest wymagany żaden serwer — strona działa lokalnie.
+• Otwórz plik index.html w przeglądarce.
+• Nie jest wymagany żaden serwer - strona działa lokalnie.
+```
 
 Pełnione funkcje:
 
+```
 | Funkcja | Opis |
 | 📖 Lista książek | 16 książek z okładką, tytułem, autorem, kategorią i statusem
 | 🔍 Wyszukiwarka | Filtrowanie po tytule i autorze w czasie rzeczywistym
@@ -18,29 +21,37 @@ Pełnione funkcje:
 | 🛒 Koszyk | Dodawanie / usuwanie książek, licznik, panel boczny
 | 📋 Formularz kontaktowy | Walidacja: imię, email, wiadomość + komunikaty błędów
 | 📱 RWD | Działa na telefonie (360px), tablecie (768px) i komputerze
+```
 
 Technologie uzyte:
 
+```
 • HTML5 - semantyczna struktura (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`)
 • CSS3 - Flexbox, Grid, animacje, `@media` queries, zmienne CSS
 • JavaScript (ES6+) - manipulacja DOM, tablice, eventy, walidacja
+```
 
 Podział zadan
 
+```
 | Uczeń | Zakres prac |
 | Piotr Szymańsi : Struktura HTML, semantyka, dostępność, formularz kontaktowy
 | Fabian Szulda : CSS (układ, RWD, animacje), JavaScript (filtry, koszyk, walidacja)
+```
 
 Struktura plików
 
 biblioteka-online/
+```
 ├── index.html     • Główna strona
 ├── style.css      • Arkusz stylów
 ├── script.js      • Logika JavaScript
 └── README.md      • Dokumentacja
+```
 
 📌 Wymagania 📌
 
+```
 • [✅] Minimum 15 książek z tytułem, autorem, kategorią, okładką i statusem
 • [✅] Filtrowanie po kategorii (przyciski)
 • [✅] Wyszukiwarka po tytule i autorze
@@ -61,3 +72,4 @@ biblioteka-online/
 • [✅] Eventy: `click`, `input`, `submit`, `change`
 • [✅] Warunki `if` w JS
 • [✅] Tablica książek (`books[]`)
+```
