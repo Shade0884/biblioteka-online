@@ -66,7 +66,7 @@ biblioteka-online/
 • [✅] Osobny plik CSS, brak inline stylów
 • [✅] Flexbox + Grid
 • [✅] Efekty `:hover`
-• [✅] RWD: telefon (~360px), tablet (~768px), komputer
+• [✅] Responsywność: telefon (~360px), tablet (~768px), komputer
 • [✅] `@media (min-width: 768px)` oraz reguły mobile
 • [✅] Manipulacja DOM w JS
 • [✅] Eventy: `click`, `input`, `submit`, `change`
