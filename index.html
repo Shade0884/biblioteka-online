@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteka Miejska — Wypożyczalnia Online</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="naglowek-wewnetrzny">
+      <div class="logo">
+        <span class="logo-ikona">📚</span>
+        <div>
+          <h1>Biblioteka Miejska</h1>
+          <p class="slogan">Wypożyczalnia Online</p>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#books" class="link-nawigacji">Książki</a></li>
+          <li><a href="#contact" class="link-nawigacji">Kontakt</a></li>
+          <li>
+            <button class="przycisk-koszyk" id="przelacznikKoszyka" aria-label="Koszyk wypożyczeń">
+              🛒 <span class="licznik-koszyka" id="licznikKoszyka">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+
+    <div class="nawigacja-mobilna" id="nawigacjaMobilna">
+      <a href="#books">Książki</a>
+      <a href="#contact">Kontakt</a>
+    </div>
+  </header>
+
+  <div class="panel-koszyka" id="panelKoszyka">
+    <div class="naglowek-koszyka">
+      <h2>Twoje wypożyczenia</h2>
+      <button id="zamknijKoszyk" aria-label="Zamknij">✕</button>
+    </div>
+
+    <ul class="lista-koszyka" id="listaKoszyka"></ul>
+    <div class="podsumowanie-koszyka" id="podsumowanieKoszyka">
+      <p>Brak książek w koszyku.</p>
+    </div>
+  </div>
+  <div class="nakladka-koszyka" id="nakladkaKoszyka"></div>
+
+  <main>
+
+    <section class="baner">
+      <div class="baner-tekst">
+        <p class="baner-naglowek">Witaj w nowoczesnej</p>
+        <h2 class="baner-tytul">Bibliotece Online</h2>
+        <p class="baner-opis">Przeglądaj, filtruj i wypożyczaj książki — prosto z domu.</p>
+        <a href="#books" class="przycisk-glowny">Przeglądaj katalog →</a>
+      </div>
+      <div class="baner-wizualizacja" aria-hidden="true">
+        <div class="stos-ksiazek">
+          <div class="ksiazka-deko b1"></div>
+          <div class="ksiazka-deko b2"></div>
+          <div class="ksiazka-deko b3"></div>
+          <div class="ksiazka-deko b4"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="books">
+      <div class="naglowek-sekcji">
+        <h2>Katalog książek</h2>
+        <p class="podtytul-sekcji">Znajdź swoją następną lekturę</p>
+      </div>
+
+      <div class="filtry">
+        <div class="opakowanie-wyszukiwarki">
+          <input
+            type="text"
+            id="inputWyszukiwarki"
+            placeholder="Szukaj po tytule lub autorze…"
+            aria-label="Wyszukiwarka książek"
+          />
+          <span class="ikona-wyszukiwarki">🔍</span>
+        </div>
+
+        <div class="filtry-kategorii" id="filtrKategorii">
+          <button class="przycisk-kategorii active" data-cat="all">Wszystkie</button>
+        </div>
+
+        <select id="wybierzSortowanie" aria-label="Sortuj">
+          <option value="default">Sortuj: domyślnie</option>
+          <option value="title-asc">Tytuł A–Z</option>
+          <option value="title-desc">Tytuł Z–A</option>
+          <option value="author">Autor A–Z</option>
+        </select>
+      </div>
+
+      <div class="siatka-ksiazek" id="siatkaksiazkek"></div>
+      <p class="brak-wynikow" id="brakWynikow" style="display:none;">Nie znaleziono żadnych książek. 😔</p>
+    </section>
+
+    <section id="contact">
+      <div class="naglowek-sekcji">
+        <h2>Kontakt</h2>
+        <p class="podtytul-sekcji">Masz pytania? Napisz do nas!</p>
+      </div>
+
+      <form class="formularz-kontaktowy" id="formularzKontaktowy" novalidate>
+        <div class="grupa-formularza">
+          <label for="imieKontakt">Imię i nazwisko</label>
+          <input type="text" id="imieKontakt" name="name" placeholder="Jan Iksiński" />
+          <span class="blad-pola" id="bladImienia"></span>
+        </div>
+
+        <div class="grupa-formularza">
+          <label for="emailKontakt">Adres e-mail</label>
+          <input type="email" id="emailKontakt" name="email" placeholder="jan@costam.pl" />
+          <span class="blad-pola" id="bladEmaila"></span>
+        </div>
+
+        <div class="grupa-formularza">
+          <label for="wiadomoscKontakt">Wiadomość</label>
+          <textarea id="wiadomoscKontakt" name="message" rows="5" placeholder="Twoja wiadomość…"></textarea>
+          <span class="blad-pola" id="bladWiadomosci"></span>
+        </div>
+
+        <button type="submit" class="przycisk-glowny">Wyślij wiadomość</button>
+
+        <p class="sukces-formularza" id="sukcesFormularza" style="display:none;">✅ Wiadomość wysłana! Odezwiemy się wkrótce.</p>
+      </form>
+    </section>
+
+  </main>
+  <footer>
+    <div class="stopka-wewnetrzna">
+      <p>© 2025 Biblioteka Miejska. Wszystkie prawa zastrzeżone.</p>
+      <p class="podtytul-stopki">Projekt edukacyjny — HTML / CSS / JavaScript</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
