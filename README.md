@@ -35,7 +35,7 @@ Podział zadan
 
 ```
 | Uczeń | Zakres prac |
-| Piotr Szymański : Struktura HTML, semantyka, dostępność, formularz kontaktowy |
+| Piotr Szymański : Struktura HTML, semantyka, dostępność, formularz kontaktowy, dokumentacja wykonanych prac |
 | Fabian Szulda : CSS (układ, RWD, animacje), JavaScript (filtry, koszyk, walidacja) |
 ```
 
