@@ -363,3 +363,228 @@ footer { background: var(--dark); color: rgba(255,255,255,.7); text-align: cente
   .tytul-ksiazki { font-size: .9rem; }
   .przycisk-wypozycz { font-size: .75rem; padding: .35rem .7rem; }
 }
+
+.licznik-wynikow {
+  font-size: .82rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+@keyframes ping {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+.licznik-koszyka.ping { animation: ping .3s ease; }
+
+.modal-nakladka {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.modal-nakladka.open { display: flex; }
+
+.modal-karta {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 640px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  animation: fadeUp .25s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-zamknij {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,.07);
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: .85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--trans);
+  z-index: 1;
+}
+.modal-zamknij:hover { background: rgba(0,0,0,.15); }
+
+.modal-tresc {
+  display: flex;
+  gap: 1.75rem;
+  padding: 2rem;
+}
+
+.modal-okladka {
+  width: 150px;
+  flex-shrink: 0;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.18);
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  flex: 1;
+}
+
+.modal-tytul {
+  font-size: 1.3rem;
+  color: var(--dark);
+  line-height: 1.25;
+}
+
+.modal-autor {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.modal-opis {
+  font-size: .9rem;
+  color: var(--text);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.modal-stopka {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+}
+
+.karta-ksiazki .okladka-ksiazki,
+.karta-ksiazki .info-ksiazki {
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .modal-tresc { flex-direction: column; }
+  .modal-okladka { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+}
+
+.gwiazdki { display: flex; gap: 2px; margin-top: .25rem; }
+.gwiazdka { font-size: 1rem; color: #ddd; cursor: default; transition: color var(--trans), transform var(--trans); }
+.gwiazdka.aktywna { color: var(--gold); }
+.gwiazdki-interaktywne .gwiazdka { cursor: pointer; }
+.gwiazdki-interaktywne .gwiazdka:hover,
+.gwiazdki-interaktywne .gwiazdka.hover { color: var(--gold); transform: scale(1.2); }
+
+.przycisk-serce {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  background: rgba(255,255,255,.9);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .9rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: color var(--trans), transform var(--trans), background var(--trans);
+  z-index: 2;
+}
+.przycisk-serce:hover { color: #e74c3c; transform: scale(1.15); }
+.przycisk-serce.aktywne { color: #e74c3c; }
+
+.karta-ksiazki { position: relative; }
+
+.okladka-wrapper { position: relative; overflow: hidden; cursor: pointer; }
+.okladka-wrapper .okladka-ksiazki { transition: transform .35s ease; }
+.okladka-wrapper:hover .okladka-ksiazki { transform: scale(1.05); }
+.okladka-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,26,46,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.okladka-wrapper:hover .okladka-overlay { opacity: 1; }
+.okladka-overlay span {
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,.7);
+  padding: .4rem 1rem;
+  border-radius: 50px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #e8e0d0;
+  background: #faf7f2;
+}
+.tab-btn {
+  flex: 1;
+  padding: .75rem .5rem;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color var(--trans), border-bottom var(--trans);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+.tab-btn:hover { color: var(--dark); }
+.tab-btn.active { color: var(--dark); border-bottom-color: var(--gold); }
+
+.brak-tab { padding: 2rem 1.5rem; color: var(--muted); font-size: .9rem; }
+
+.przycisk-wyczysc {
+  margin-top: .75rem;
+  width: 100%;
+  font-size: .85rem;
+  padding: .6rem 1rem;
+  text-align: center;
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  background: var(--dark);
+  color: var(--cream);
+  padding: .7rem 1.5rem;
+  border-radius: 50px;
+  font-size: .88rem;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+  z-index: 500;
+  white-space: nowrap;
+  border: 1px solid var(--gold);
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+#modalGwiazdkiWrapper { margin: .25rem 0 .5rem; }
+#modalGwiazdkiWrapper .gwiazdka { font-size: 1.4rem; }
